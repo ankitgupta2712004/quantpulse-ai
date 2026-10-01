@@ -1,0 +1,298 @@
+{
+  "timestamp": "2026-09-30 08:48:33 UTC",
+  "evaluation_protocol": "Strict 80/20 Chronological Time-Series Split (Zero Lookahead Bias)",
+  "features": [
+    "Daily Return",
+    "SMA_20",
+    "SMA_50",
+    "Volatility_20",
+    "RSI_14",
+    "Momentum_10"
+  ],
+  "assets_evaluated": {
+    "AAPL": {
+      "train_samples": 416,
+      "test_samples": 105,
+      "models": {
+        "Linear Regression": {
+          "MAE": 0.01308,
+          "RMSE": 0.01801,
+          "R2": -0.0334,
+          "Directional_Accuracy_Pct": 47.62,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Random Forest Regressor": {
+          "MAE": 0.01309,
+          "RMSE": 0.01791,
+          "R2": -0.0215,
+          "Directional_Accuracy_Pct": 52.38,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "XGBoost Regressor": {
+          "MAE": 0.01349,
+          "RMSE": 0.01865,
+          "R2": -0.1083,
+          "Directional_Accuracy_Pct": 54.29,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Feature_Importances_XGBoost": [
+          {
+            "feature": "Momentum_5",
+            "importance": 0.199
+          },
+          {
+            "feature": "MACD_Hist",
+            "importance": 0.1122
+          },
+          {
+            "feature": "MACD",
+            "importance": 0.1006
+          },
+          {
+            "feature": "SMA_Ratio_5_20",
+            "importance": 0.0808
+          },
+          {
+            "feature": "Momentum_10",
+            "importance": 0.0781
+          }
+        ]
+      }
+    },
+    "MSFT": {
+      "train_samples": 416,
+      "test_samples": 105,
+      "models": {
+        "Linear Regression": {
+          "MAE": 0.01676,
+          "RMSE": 0.02442,
+          "R2": -0.0032,
+          "Directional_Accuracy_Pct": 54.29,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Random Forest Regressor": {
+          "MAE": 0.0167,
+          "RMSE": 0.02485,
+          "R2": -0.0392,
+          "Directional_Accuracy_Pct": 51.43,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "XGBoost Regressor": {
+          "MAE": 0.01652,
+          "RMSE": 0.025,
+          "R2": -0.0515,
+          "Directional_Accuracy_Pct": 51.43,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Feature_Importances_XGBoost": [
+          {
+            "feature": "Volume_SMA_Ratio",
+            "importance": 0.1192
+          },
+          {
+            "feature": "MACD_Hist",
+            "importance": 0.1191
+          },
+          {
+            "feature": "Momentum_5",
+            "importance": 0.1168
+          },
+          {
+            "feature": "RSI_14",
+            "importance": 0.0941
+          },
+          {
+            "feature": "MACD",
+            "importance": 0.0909
+          }
+        ]
+      }
+    },
+    "NVDA": {
+      "train_samples": 416,
+      "test_samples": 105,
+      "models": {
+        "Linear Regression": {
+          "MAE": 0.01966,
+          "RMSE": 0.02468,
+          "R2": 0.0481,
+          "Directional_Accuracy_Pct": 58.1,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Random Forest Regressor": {
+          "MAE": 0.01962,
+          "RMSE": 0.02496,
+          "R2": 0.0264,
+          "Directional_Accuracy_Pct": 47.62,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "XGBoost Regressor": {
+          "MAE": 0.01979,
+          "RMSE": 0.02531,
+          "R2": -0.0009,
+          "Directional_Accuracy_Pct": 52.38,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Feature_Importances_XGBoost": [
+          {
+            "feature": "Price_to_SMA20",
+            "importance": 0.2097
+          },
+          {
+            "feature": "MACD",
+            "importance": 0.143
+          },
+          {
+            "feature": "MACD_Hist",
+            "importance": 0.0805
+          },
+          {
+            "feature": "Rolling_Vol_20",
+            "importance": 0.0747
+          },
+          {
+            "feature": "Volume_SMA_Ratio",
+            "importance": 0.0717
+          }
+        ]
+      }
+    },
+    "GOOGL": {
+      "train_samples": 416,
+      "test_samples": 105,
+      "models": {
+        "Linear Regression": {
+          "MAE": 0.01643,
+          "RMSE": 0.02285,
+          "R2": -0.0092,
+          "Directional_Accuracy_Pct": 46.67,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Random Forest Regressor": {
+          "MAE": 0.01596,
+          "RMSE": 0.02233,
+          "R2": 0.036,
+          "Directional_Accuracy_Pct": 53.33,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "XGBoost Regressor": {
+          "MAE": 0.01581,
+          "RMSE": 0.02247,
+          "R2": 0.0236,
+          "Directional_Accuracy_Pct": 56.19,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Feature_Importances_XGBoost": [
+          {
+            "feature": "MACD",
+            "importance": 0.1218
+          },
+          {
+            "feature": "Volume_SMA_Ratio",
+            "importance": 0.1131
+          },
+          {
+            "feature": "MACD_Hist",
+            "importance": 0.1073
+          },
+          {
+            "feature": "Price_to_SMA20",
+            "importance": 0.0961
+          },
+          {
+            "feature": "High_Low_Spread",
+            "importance": 0.091
+          }
+        ]
+      }
+    },
+    "AMZN": {
+      "train_samples": 416,
+      "test_samples": 105,
+      "models": {
+        "Linear Regression": {
+          "MAE": 0.01622,
+          "RMSE": 0.02383,
+          "R2": -0.0377,
+          "Directional_Accuracy_Pct": 46.67,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Random Forest Regressor": {
+          "MAE": 0.01685,
+          "RMSE": 0.02496,
+          "R2": -0.138,
+          "Directional_Accuracy_Pct": 44.76,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "XGBoost Regressor": {
+          "MAE": 0.0179,
+          "RMSE": 0.02651,
+          "R2": -0.2839,
+          "Directional_Accuracy_Pct": 45.71,
+          "Next_Period_Return_Pct": 0.0,
+          "Predicted_Direction": "N/A"
+        },
+        "Feature_Importances_XGBoost": [
+          {
+            "feature": "High_Low_Spread",
+            "importance": 0.105
+          },
+          {
+            "feature": "Volume_SMA_Ratio",
+            "importance": 0.1047
+          },
+          {
+            "feature": "Price_to_SMA20",
+            "importance": 0.1032
+          },
+          {
+            "feature": "Momentum_10",
+            "importance": 0.0917
+          },
+          {
+            "feature": "MACD",
+            "importance": 0.0906
+          }
+        ]
+      }
+    }
+  },
+  "sentiment_benchmark": {
+    "Test_Samples": 18,
+    "Accuracy_Pct": 66.67,
+    "Macro_Precision": 0.7667,
+    "Macro_Recall": 0.6667,
+    "Macro_F1_Score": 0.673,
+    "Per_Class": {
+      "positive": {
+        "Precision": 0.8,
+        "Recall": 0.6667,
+        "F1_Score": 0.7273
+      },
+      "neutral": {
+        "Precision": 0.5,
+        "Recall": 0.8333,
+        "F1_Score": 0.625
+      },
+      "negative": {
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1_Score": 0.6667
+      }
+    }
+  }
+}
